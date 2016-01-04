@@ -1,2 +1,2 @@
 # Project Euler
-https://projecteuler.net/
+Problems from https://projecteuler.net/. Solution with Java. Updating.
