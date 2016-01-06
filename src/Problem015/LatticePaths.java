@@ -12,7 +12,7 @@ public class LatticePaths {
     public static void main(String[] args) {
         final int gridSize = 20;
 
-        //combination method
+        //combination
         long paths = 1;
 
         for (int i = 0; i < gridSize; i++) {

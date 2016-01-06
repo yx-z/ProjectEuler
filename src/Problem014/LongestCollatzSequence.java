@@ -1,3 +1,5 @@
+package Problem014;
+
 /**
  Problem 14:
 
@@ -33,7 +35,6 @@ public class LongestCollatzSequence{
 
     private static int countCollatzSequenceLength(long num) {
         if (num == 1) return 1;
-
         if (num % 2 == 0) {
             num = num / 2;
             return 1 + countCollatzSequenceLength(num);

@@ -19,20 +19,21 @@ import java.util.HashMap;
  */
 
 public class CountingSundays {
+    private static HashMap<Integer, Integer> daysEachMonth = new HashMap<Integer, Integer>() {{
+        this.put(1,31);
+        this.put(2,28);
+        this.put(3,31);
+        this.put(4,30);
+        this.put(5,31);
+        this.put(6,30);
+        this.put(7,31);
+        this.put(8,31);
+        this.put(9,30);
+        this.put(10,31);
+        this.put(11,30);
+        this.put(12,31);
+    }};
     public static void main(String[] args) {
-        HashMap<Integer, Integer> daysEachMonth = new HashMap<>();
-        daysEachMonth.put(1, 31);
-        daysEachMonth.put(2, 28);
-        daysEachMonth.put(3, 31);
-        daysEachMonth.put(4, 30);
-        daysEachMonth.put(5, 31);
-        daysEachMonth.put(6, 30);
-        daysEachMonth.put(7, 31);
-        daysEachMonth.put(8, 31);
-        daysEachMonth.put(9, 30);
-        daysEachMonth.put(10, 31);
-        daysEachMonth.put(11, 30);
-        daysEachMonth.put(12, 31);
 
         int year = 1901;
         int month = 1;

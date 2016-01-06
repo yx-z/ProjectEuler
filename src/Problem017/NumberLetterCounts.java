@@ -14,50 +14,54 @@ import java.util.HashMap;
  */
 
 public class NumberLetterCounts {
-    private static HashMap<Integer, String> numTrans = new HashMap<>();
+    private static HashMap<Integer, String> numTrans = new HashMap<Integer, String>(){{
+        this.put(0, "");
+        this.put(1, "one");
+        this.put(2, "two");
+        this.put(3, "three");
+        this.put(4, "four");
+        this.put(5, "five");
+        this.put(6, "six");
+        this.put(7, "seven");
+        this.put(8, "eight");
+        this.put(9, "nine");
+        this.put(10, "ten");
+        this.put(11, "eleven");
+        this.put(12, "twelve");
+        this.put(13, "thirteen");
+        this.put(14, "fourteen");
+        this.put(15, "fifteen");
+        this.put(16, "sixteen");
+        this.put(17, "seventeen");
+        this.put(18, "eighteen");
+        this.put(19, "nineteen");
+        this.put(20, "twenty");
+        this.put(30, "thirty");
+        this.put(40, "forty");
+        this.put(50, "fifty");
+        this.put(60, "sixty");
+        this.put(70, "seventy");
+        this.put(80, "eighty");
+        this.put(90, "ninety");
+        this.put(100, "onehundred");
+        this.put(200, "twohundred");
+        this.put(300, "threehundred");
+        this.put(400, "fourhundred");
+        this.put(500, "fivehundred");
+        this.put(600, "sixhundred");
+        this.put(700, "sevenhundred");
+        this.put(800, "eighthundred");
+        this.put(900, "ninehundred");
+    }};
 
     public static void main(String[] args) {
-        numTrans.put(0, "");
-        numTrans.put(1, "one");
-        numTrans.put(2, "two");
-        numTrans.put(3, "three");
-        numTrans.put(4, "four");
-        numTrans.put(5, "five");
-        numTrans.put(6, "six");
-        numTrans.put(7, "seven");
-        numTrans.put(8, "eight");
-        numTrans.put(9, "nine");
-        numTrans.put(10, "ten");
-        numTrans.put(11, "eleven");
-        numTrans.put(12, "twelve");
-        numTrans.put(13, "thirteen");
-        numTrans.put(14, "fourteen");
-        numTrans.put(15, "fifteen");
-        numTrans.put(16, "sixteen");
-        numTrans.put(17, "seventeen");
-        numTrans.put(18, "eighteen");
-        numTrans.put(19, "nineteen");
-        numTrans.put(20, "twenty");
-        numTrans.put(30, "thirty");
-        numTrans.put(40, "forty");
-        numTrans.put(50, "fifty");
-        numTrans.put(60, "sixty");
-        numTrans.put(70, "seventy");
-        numTrans.put(80, "eighty");
-        numTrans.put(90, "ninety");
-        numTrans.put(100, "one hundred");
-        numTrans.put(200, "two hundred");
-        numTrans.put(300, "three hundred");
-        numTrans.put(400, "four hundred");
-        numTrans.put(500, "five hundred");
-        numTrans.put(600, "six hundred");
-        numTrans.put(700, "seven hundred");
-        numTrans.put(800, "eight hundred");
-        numTrans.put(900, "nine hundred");
         int sum = 0;
+        //1 to 999
         for (int i = 1; i < 1000; i++)
-            sum += toStr(i).replaceAll(" ", "").length();
+            sum += toStr(i).length();
+        //+1000.length
         sum += "onethousand".length();
+
         System.out.println("Sum: " + sum);
     }
 
