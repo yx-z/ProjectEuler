@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a288852a-53eb-4b53-ae09-53c07fba967a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Problem023/NonAbundantSums.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Problem025/ThousandDigitFibNum.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem001/MultiplesOf3And5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem002/EvenFibonacciNum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem003/LargestPrimeFactor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem004/LargestPalindromeProduct.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem005/SmallestMultiple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem006/SumSquareDifference.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem007/Prime10001st.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem008/LargestProductInSeries.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem009/SpecialPythagoreanTriplet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem010/SummationOfPrimes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem011/LargestProductInGrid.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem012/HighlyDivisibleTriNum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem013/LargeSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem014/LongestCollatzSequence.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem015/LatticePaths.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem016/PowerDigitSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem017/NumberLetterCounts$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem017/NumberLetterCounts.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem018/MaxiumPathSumI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem019/CountingSundays$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem019/CountingSundays.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem020/FactorialDigitSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem021/AmicableNumbers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem022/NamesScores.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem022/names.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/ProjectEuler/Problem067/MaxiumPathSumII.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ProjectEuler.iml" afterPath="$PROJECT_DIR$/.idea/ProjectEuler.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem025/ThousandDigitFibNum.java" afterPath="$PROJECT_DIR$/src/Problem025/ThousandDigitFibNum.java" />
     </list>
     <ignored path="ProjectEuler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,9 +26,12 @@
       <file leaf-file-name="ThousandDigitFibNum.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Problem025/ThousandDigitFibNum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27565393">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-              <folding />
+            <state vertical-scroll-proportion="0.69818914">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+              <folding>
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -215,7 +189,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.NonAbundantSums">
+  <component name="RunManager" selected="Application.ThousandDigitFibNum">
     <configuration default="false" name="FactorialDigitSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -569,8 +543,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.NonAbundantSums" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ThousandDigitFibNum" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ThousandDigitFibNum" />
+        <item index="1" class="java.lang.String" itemvalue="Application.NonAbundantSums" />
         <item index="2" class="java.lang.String" itemvalue="Application.NamesScores" />
         <item index="3" class="java.lang.String" itemvalue="Application.AmicableNumbers" />
         <item index="4" class="java.lang.String" itemvalue="Application.FactorialDigitSum" />
@@ -592,7 +566,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1278" height="777" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -635,7 +609,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -877,9 +851,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem025/ThousandDigitFibNum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27565393">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
+        <state vertical-scroll-proportion="0.69818914">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
