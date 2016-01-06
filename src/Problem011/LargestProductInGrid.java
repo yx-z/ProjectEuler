@@ -1,4 +1,4 @@
-package edu.illinois.cs;
+package Problem011;
 
 /**
  * Problem 11:

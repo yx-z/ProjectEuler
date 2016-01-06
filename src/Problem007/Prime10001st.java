@@ -1,4 +1,4 @@
-package edu.illinois.cs;
+package Problem007;
 
 import java.util.ArrayList;
 
