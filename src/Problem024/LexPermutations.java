@@ -1,5 +1,8 @@
 package Problem024;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 /**
  * A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4.
  * If all of the permutations are listed numerically or alphabetically, we call it lexicographic order.
@@ -26,21 +29,41 @@ And so forth
 
 public class LexPermutations {
     public static void main(String[] args) {
-        int remainder = 1000000 - 1;
-        int factorial = 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1;
-        int[] factoid = new int[10];
+        final int REMAINDER = 1000000;
 
-        for (int i = 9; i >= 1; i--) {
-            factoid[i] = remainder / factorial;
-            remainder %= factorial;
-            factorial /= i;
+        //find the indices
+        ArrayList<Integer> index = new ArrayList<>();
+        int currentIndex = 0;
+        int sum = 0;
+        for (int i = 9; i > 0; i--) {
+            int j = 0;
+            for (; j <= 9; j++) {
+                if (sum + fact(i) * (j + 1) >= REMAINDER) {
+                    sum += fact(i) * j;
+                    break;
+                }
+            }
+            index.add(currentIndex, j);
+            currentIndex++;
         }
 
-        for (int i = 1; i <= 9; i++)
-            for (int j = i - 1; j >= 0; j--)
-                if (factoid[j] >= factoid[i]) factoid[j]++;
+        //fill with nums
+        LinkedList<Integer> nums = new LinkedList<>();
+        for (int i = 0; i < 10; i++)
+            nums.add(i, i);
+        long ans = 0;
+        for (Integer i : index){
+            ans += nums.get(i);
+            nums.remove(nums.get(i));
+            ans *= 10;
+        }
 
-        for (int i = 9; i >= 0; i--)
-            System.out.print(factoid[i]);
+        System.out.println(ans);
+    }
+
+    //util method for factorial
+    private static int fact(int n) {
+        if (n == 0) return 1;
+        else return n * fact(n - 1);
     }
 }
