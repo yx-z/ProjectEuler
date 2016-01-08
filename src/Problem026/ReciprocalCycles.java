@@ -1,5 +1,8 @@
 package Problem026;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given:
  * <p>
@@ -20,31 +23,27 @@ package Problem026;
 
 public class ReciprocalCycles {
     public static void main(String[] args) {
-        int sequenceLength = 0;
         int num = 0;
-
-        for (int i = 1000; i > 1; i--) {
-            if (sequenceLength >= i) break;
-
-            int[] foundRemainders = new int[i];
-            int value = 1;
-            int position = 0;
-
-            while (foundRemainders[value] == 0 && value != 0) {
-                foundRemainders[value] = position;
-                value *= 10;
-                value %= i;
-                position++;
-            }
-
-            if (position - foundRemainders[value] > sequenceLength) {
+        int maxLength = 0;
+        for (int i = 2; i < 1000; i++) {
+            if(getCycleLength(i) > maxLength) {
                 num = i;
-                sequenceLength = position - foundRemainders[value];
+                maxLength = getCycleLength(i);
             }
         }
-
         System.out.println(num);
     }
 
 
+    private static int getCycleLength(int n) {
+        Map<Integer, Integer> stateToIter = new HashMap<>();
+        int state = 1;
+        int iter = 0;
+        while (!stateToIter.containsKey(state)) {
+            stateToIter.put(state, iter);
+            state = state * 10 % n;
+            iter++;
+        }
+        return iter - stateToIter.get(state);
+    }
 }
