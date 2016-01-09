@@ -11,9 +11,8 @@ import java.math.BigInteger;
 public class SelfPowers {
     public static void main(String[] args) {
         BigInteger result = new BigInteger("0");
-        for (int i = 1; i <= 1000; i++) {
+        for (int i = 1; i <= 1000; i++)
             result = result.add(new BigInteger(""+i).pow(i));
-        }
 
         System.out.println(result.toString().substring(result.toString().length() - 10,result.toString().length()));
     }
