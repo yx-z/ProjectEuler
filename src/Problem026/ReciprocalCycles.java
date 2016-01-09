@@ -26,16 +26,16 @@ public class ReciprocalCycles {
         int num = 0;
         int maxLength = 0;
         for (int i = 2; i < 1000; i++) {
-            if(getCycleLength(i) > maxLength) {
+            if(getLength(i) > maxLength) {
                 num = i;
-                maxLength = getCycleLength(i);
+                maxLength = getLength(i);
             }
         }
         System.out.println(num);
     }
 
 
-    private static int getCycleLength(int n) {
+    private static int getLength(int n) {
         Map<Integer, Integer> stateToIter = new HashMap<>();
         int state = 1;
         int iter = 0;
