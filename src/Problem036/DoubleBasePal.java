@@ -10,7 +10,7 @@ package Problem036;
 
 public class DoubleBasePal {
     public static void main(String[] args) {
-        
+
     }
 
     private static boolean isPal(String s) {
