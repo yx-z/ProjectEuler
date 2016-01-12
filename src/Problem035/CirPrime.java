@@ -14,9 +14,9 @@ public class CirPrime {
     public static void main(String[] args) {
         final int MAX = 1000000;
         int counter = 0;
-        for (int i = 2; i < MAX; i++) {
-            if(isCirPrime(getCir(i))) counter++;
-        }
+        for (int i = 2; i < MAX; i++)
+            if (isCirPrime(getCir(i))) counter++;
+
         System.out.println(counter);
     }
 
