@@ -19,7 +19,7 @@ public class MultiplesOf3And5 {
         System.out.println("Sum: " + sum);
     }
 
-    private static boolean multiplesOf3And5 (int num) {
-        return (num % 3 == 0 || num % 5 == 0);
+    private static boolean multiplesOf3And5 (int n) {
+        return (n % 3 == 0 || n % 5 == 0);
     }
 }
