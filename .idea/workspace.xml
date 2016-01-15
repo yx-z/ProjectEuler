@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a288852a-53eb-4b53-ae09-53c07fba967a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Problem039/IntRightTri.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem001/MultiplesOf3And5.class" afterPath="$PROJECT_DIR$/out/Problem001/MultiplesOf3And5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Problem045/TriPentaHex.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ProjectEuler.iws" />
@@ -24,12 +23,12 @@
     <favorites_list name="ProjectEuler" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="IntRightTri.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Problem039/IntRightTri.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TriPentaHex.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Problem045/TriPentaHex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3030303">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7637795">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -105,6 +104,7 @@
         <option value="$PROJECT_DIR$/src/Problem042/CodedTriNum.java" />
         <option value="$PROJECT_DIR$/src/Problem037/TruncatablePrimes.java" />
         <option value="$PROJECT_DIR$/src/Problem039/IntTriNum.java" />
+        <option value="$PROJECT_DIR$/src/Problem045/TriPentaHex.java" />
       </list>
     </option>
   </component>
@@ -184,14 +184,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Problem039" />
+              <option name="myItemId" value="Problem045" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -203,27 +203,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.IntRightTri">
-    <configuration default="false" name="CirPrime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Problem035.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Problem035.CirPrime" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProjectEuler" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.TriPentaHex">
     <configuration default="false" name="ChampernowneConstant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -292,6 +272,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="Problem039.IntRightTri" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ProjectEuler" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TriPentaHex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Problem045.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Problem045.TriPentaHex" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -549,19 +549,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CirPrime" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ChampernowneConstant" />
-      <item index="2" class="java.lang.String" itemvalue="Application.CodedTriNum" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TruncatablePrimes" />
-      <item index="4" class="java.lang.String" itemvalue="Application.IntRightTri" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ChampernowneConstant" />
+      <item index="1" class="java.lang.String" itemvalue="Application.CodedTriNum" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TruncatablePrimes" />
+      <item index="3" class="java.lang.String" itemvalue="Application.IntRightTri" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TriPentaHex" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.IntRightTri" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TruncatablePrimes" />
-        <item index="2" class="java.lang.String" itemvalue="Application.CodedTriNum" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ChampernowneConstant" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CirPrime" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TriPentaHex" />
+        <item index="1" class="java.lang.String" itemvalue="Application.IntRightTri" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TruncatablePrimes" />
+        <item index="3" class="java.lang.String" itemvalue="Application.CodedTriNum" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ChampernowneConstant" />
       </list>
     </recent_temporary>
   </component>
@@ -589,7 +589,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23649634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21751826" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.105921604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -632,13 +632,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Problem024/LexPermutations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem026/ReciprocalCycles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -849,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91715974">
-          <caret line="38" column="5" selection-start-line="31" selection-start-column="2" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem022/NamesScores.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3773585">
@@ -968,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem042/CodedTriNum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75757575">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem037/TruncatablePrimes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6969697">
@@ -984,8 +963,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem039/IntRightTri.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3030303">
+        <state vertical-scroll-proportion="0.2276176">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52715653">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem042/CodedTriNum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71246004">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="57" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem045/TriPentaHex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7637795">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding />
         </state>
       </provider>
