@@ -3,11 +3,11 @@ package Problem013;
 import java.math.BigInteger;
 
 /**
- * Problem 13:
  * Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.(see below)
  */
 
 public class LargeSum {
+    //initialize
     private static String[] num =
             {
                     "37107287533902102798797998220837590246510135740250",
@@ -112,12 +112,13 @@ public class LargeSum {
                     "53503534226472524250874054075591789781264330331690"
             };
     public static void main(String[] args) {
-
+        //using BigInteger since the number is too large
         BigInteger sum = BigInteger.ZERO;
 
         for (int i = 0; i < num.length; i++)
             sum = sum.add(new BigInteger(num[i]));
 
+        //toString() and get first digits of the String
         System.out.println("Ans: " + sum.toString().substring(0,10));
     }
 }

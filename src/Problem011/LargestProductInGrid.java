@@ -1,7 +1,6 @@
 package Problem011;
 
 /**
- * Problem 11:
  * n the 20×20 grid below, four numbers along a diagonal line have been marked in red.
  * 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
  * 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -56,28 +55,22 @@ public class LargestProductInGrid {
         };
         long max = 0;
 
-        for (int i = 0; i < num.length; i++) {
+        //row check
+        for (int i = 0; i < num.length; i++)
             for (int j = 0; j < num[0].length - 3; j++) {
                 long product = num[i][j] * num[i][j + 1] * num[i][j + 2] * num[i][j + 3];
                 if (product > max) max = product;
             }
-        }
 
-        for (int i = 0; i < num.length - 3; i++) {
+        //col check
+        for (int i = 0; i < num.length - 3; i++)
             for (int j = 0; j < num[0].length; j++) {
                 long product = num[i][j] * num[i + 1][j] * num[i + 2][j] * num[i + 3][j];
                 if (product > max) max = product;
             }
-        }
 
-        for (int i = 0; i < num.length - 3; i++) {
-            for (int j = 0; j < num[0].length - 3; j++) {
-                long product = num[i][j] * num[i + 1][j + 1] * num[i + 2][j + 2] * num[i + 3][j + 3];
-                if (product > max) max = product;
-            }
-        }
-
-        for (int i = 3; i < num[0].length - 3; i++) {
+        //diagonal in 4 directions check
+        for (int i = 3; i < num[0].length - 3; i++)
             for (int j = 3; j < num.length - 3; j++) {
                 long upLeft = num[i][j] * num[i - 1][j - 1] * num[i - 2][j - 2] * num[i - 3][j - 3];
                 long upRight = num[i][j] * num[i - 1][j + 1] * num[i - 2][j + 2] * num[i - 3][j + 3];
@@ -86,7 +79,6 @@ public class LargestProductInGrid {
 
                 max = Math.max(Math.max(Math.max(upLeft, upRight), Math.max(downLeft, downRight)), max);
             }
-        }
 
         System.out.println("Max: " + max);
     }

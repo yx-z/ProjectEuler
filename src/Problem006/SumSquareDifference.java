@@ -1,7 +1,6 @@
 package Problem006;
 
 /**
- * Problem 6:
  * The sum of the squares of the first ten natural numbers is:
  * 1^2 + 2^2 + ... + 10^2 = 385
  * <p>
@@ -17,10 +16,10 @@ package Problem006;
 public class SumSquareDifference {
     public static void main(String[] args) {
         long sum = 0;
-        for (int i = 1; i <= 100; i++) {
+        //square first, then add
+        for (int i = 1; i <= 100; i++)
             sum += i * i;
-        }
-
+        //1 + 2 + ... + 100 = 5050, i just know it lol.
         System.out.println(5050 * 5050 - sum);
     }
 }

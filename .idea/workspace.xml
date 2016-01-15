@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a288852a-53eb-4b53-ae09-53c07fba967a" name="Default" comment="" />
+    <list default="true" id="a288852a-53eb-4b53-ae09-53c07fba967a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem001/MultiplesOf3And5.class" afterPath="$PROJECT_DIR$/out/Problem001/MultiplesOf3And5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem002/EvenFibonacciNum.class" afterPath="$PROJECT_DIR$/out/Problem002/EvenFibonacciNum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem003/LargestPrimeFactor.class" afterPath="$PROJECT_DIR$/out/Problem003/LargestPrimeFactor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem007/Prime10001st.class" afterPath="$PROJECT_DIR$/out/Problem007/Prime10001st.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem052/Ans.txt" afterPath="$PROJECT_DIR$/out/Problem052/Ans.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem001/MultiplesOf3And5.java" afterPath="$PROJECT_DIR$/src/Problem001/MultiplesOf3And5.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem002/EvenFibonacciNum.java" afterPath="$PROJECT_DIR$/src/Problem002/EvenFibonacciNum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem003/LargestPrimeFactor.java" afterPath="$PROJECT_DIR$/src/Problem003/LargestPrimeFactor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem004/LargestPalindromeProduct.java" afterPath="$PROJECT_DIR$/src/Problem004/LargestPalindromeProduct.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem005/SmallestMultiple.java" afterPath="$PROJECT_DIR$/src/Problem005/SmallestMultiple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem006/SumSquareDifference.java" afterPath="$PROJECT_DIR$/src/Problem006/SumSquareDifference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem007/Prime10001st.java" afterPath="$PROJECT_DIR$/src/Problem007/Prime10001st.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem008/LargestProductInSeries.java" afterPath="$PROJECT_DIR$/src/Problem008/LargestProductInSeries.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem009/SpecialPythagoreanTriplet.java" afterPath="$PROJECT_DIR$/src/Problem009/SpecialPythagoreanTriplet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem010/SummationOfPrimes.java" afterPath="$PROJECT_DIR$/src/Problem010/SummationOfPrimes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem011/LargestProductInGrid.java" afterPath="$PROJECT_DIR$/src/Problem011/LargestProductInGrid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java" afterPath="$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem013/LargeSum.java" afterPath="$PROJECT_DIR$/src/Problem013/LargeSum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem014/LongestCollatzSequence.java" afterPath="$PROJECT_DIR$/src/Problem014/LongestCollatzSequence.java" />
+    </list>
     <ignored path="ProjectEuler.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,21 +76,9 @@
         <option value="$PROJECT_DIR$/src/Problem019/CountingSundays.java" />
         <option value="$PROJECT_DIR$/src/Problem017/NumberLetterCounts.java" />
         <option value="$PROJECT_DIR$/src/Problem015/LatticePaths.java" />
-        <option value="$PROJECT_DIR$/src/Problem014/LongestCollatzSequence.java" />
-        <option value="$PROJECT_DIR$/src/Problem013/LargeSum.java" />
-        <option value="$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java" />
         <option value="$PROJECT_DIR$/src/Problem020/FactorialDigitSum.java" />
-        <option value="$PROJECT_DIR$/src/Problem004/LargestPalindromeProduct.java" />
-        <option value="$PROJECT_DIR$/src/Problem003/LargestPrimeFactor.java" />
         <option value="$PROJECT_DIR$/src/Problem002/EvenFibonacciNum.java" />
         <option value="$PROJECT_DIR$/src/Problem001/MultiplesOf3And5.java" />
-        <option value="$PROJECT_DIR$/src/Problem005/SmallestMultiple.java" />
-        <option value="$PROJECT_DIR$/src/Problem006/SumSquareDifference.java" />
-        <option value="$PROJECT_DIR$/src/Problem007/Prime10001st.java" />
-        <option value="$PROJECT_DIR$/src/Problem008/LargestProductInSeries.java" />
-        <option value="$PROJECT_DIR$/src/Problem009/SpecialPythagoreanTriplet.java" />
-        <option value="$PROJECT_DIR$/src/Problem010/SummationOfPrimes.java" />
-        <option value="$PROJECT_DIR$/src/Problem011/LargestProductInGrid.java" />
         <option value="$PROJECT_DIR$/src/Problem021/AmicableNumbers.java" />
         <option value="$PROJECT_DIR$/src/Problem022/NamesScores.java" />
         <option value="$PROJECT_DIR$/src/Problem023/NonAbundantSums.java" />
@@ -93,6 +102,18 @@
         <option value="$PROJECT_DIR$/src/Problem045/TriPentaHex.java" />
         <option value="$PROJECT_DIR$/src/Problem052/PermutedMultiples.java" />
         <option value="$PROJECT_DIR$/src/Problem052/Ans.txt" />
+        <option value="$PROJECT_DIR$/src/Problem003/LargestPrimeFactor.java" />
+        <option value="$PROJECT_DIR$/src/Problem004/LargestPalindromeProduct.java" />
+        <option value="$PROJECT_DIR$/src/Problem005/SmallestMultiple.java" />
+        <option value="$PROJECT_DIR$/src/Problem006/SumSquareDifference.java" />
+        <option value="$PROJECT_DIR$/src/Problem008/LargestProductInSeries.java" />
+        <option value="$PROJECT_DIR$/src/Problem009/SpecialPythagoreanTriplet.java" />
+        <option value="$PROJECT_DIR$/src/Problem007/Prime10001st.java" />
+        <option value="$PROJECT_DIR$/src/Problem010/SummationOfPrimes.java" />
+        <option value="$PROJECT_DIR$/src/Problem011/LargestProductInGrid.java" />
+        <option value="$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java" />
+        <option value="$PROJECT_DIR$/src/Problem013/LargeSum.java" />
+        <option value="$PROJECT_DIR$/src/Problem014/LongestCollatzSequence.java" />
       </list>
     </option>
   </component>
@@ -126,6 +147,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -178,9 +202,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -191,87 +212,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.PermutedMultiples">
-    <configuration default="false" name="CodedTriNum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Problem042.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Problem042.CodedTriNum" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProjectEuler" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TruncatablePrimes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Problem037.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Problem037.TruncatablePrimes" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProjectEuler" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="IntRightTri" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Problem039.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Problem039.IntRightTri" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProjectEuler" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TriPentaHex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Problem045.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Problem045.TriPentaHex" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProjectEuler" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.LargestProductInGrid">
     <configuration default="false" name="PermutedMultiples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -280,6 +221,86 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="Problem052.PermutedMultiples" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ProjectEuler" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LargestPrimeFactor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Problem003.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Problem003.LargestPrimeFactor" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ProjectEuler" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Prime10001st" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Problem007.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Problem007.Prime10001st" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ProjectEuler" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SummationOfPrimes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Problem010.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Problem010.SummationOfPrimes" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ProjectEuler" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LargestProductInGrid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Problem011.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Problem011.LargestProductInGrid" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -537,19 +558,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CodedTriNum" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TruncatablePrimes" />
-      <item index="2" class="java.lang.String" itemvalue="Application.IntRightTri" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TriPentaHex" />
-      <item index="4" class="java.lang.String" itemvalue="Application.PermutedMultiples" />
+      <item index="0" class="java.lang.String" itemvalue="Application.PermutedMultiples" />
+      <item index="1" class="java.lang.String" itemvalue="Application.LargestPrimeFactor" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Prime10001st" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SummationOfPrimes" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LargestProductInGrid" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.PermutedMultiples" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TriPentaHex" />
-        <item index="2" class="java.lang.String" itemvalue="Application.IntRightTri" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TruncatablePrimes" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CodedTriNum" />
+        <item index="0" class="java.lang.String" itemvalue="Application.LargestProductInGrid" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SummationOfPrimes" />
+        <item index="2" class="java.lang.String" itemvalue="Application.LargestPrimeFactor" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Prime10001st" />
+        <item index="4" class="java.lang.String" itemvalue="Application.PermutedMultiples" />
       </list>
     </recent_temporary>
   </component>
@@ -577,10 +598,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21751826" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22043796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.105921604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17514595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -611,7 +632,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -725,94 +746,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem014/LongestCollatzSequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2662722">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem013/LargeSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem004/LargestPalindromeProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem003/LargestPrimeFactor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem002/EvenFibonacciNum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem001/MultiplesOf3And5.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem005/SmallestMultiple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem006/SumSquareDifference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem007/Prime10001st.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem008/LargestProductInSeries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem009/SpecialPythagoreanTriplet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem010/SummationOfPrimes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem011/LargestProductInGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -942,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52715653">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem042/CodedTriNum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71246004">
@@ -977,6 +907,109 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47244096">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem002/EvenFibonacciNum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32480314">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem004/LargestPalindromeProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.738189">
+          <caret line="25" column="111" selection-start-line="25" selection-start-column="111" selection-end-line="25" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem006/SumSquareDifference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53149605">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem008/LargestProductInSeries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7125984">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem003/LargestPrimeFactor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5019685">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem005/SmallestMultiple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem007/Prime10001st.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6456693">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem010/SummationOfPrimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44291338">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem009/SpecialPythagoreanTriplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05905512">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem011/LargestProductInGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40711462">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74110675">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem013/LargeSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.5573123">
+          <caret line="120" column="55" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem014/LongestCollatzSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37747034">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding />
         </state>
       </provider>
