@@ -13,9 +13,9 @@ package Problem045;
 
 public class TriPentaHex {
     public static void main(String[] args) {
-        long tri = 286;
-        long penta = 166;
-        long hex = 144;
+        long tri = 285 + 1;
+        long penta = 165 + 1;
+        long hex = 143 + 1;
 
         while (true) {
             long triangle = tri * (tri + 1) / 2;
@@ -33,6 +33,5 @@ public class TriPentaHex {
             if (ans == pentagon) penta++;
             if (ans == hexagon) hex++;
         }
-
     }
 }
