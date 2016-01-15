@@ -13,4 +13,5 @@ From https://en.wikipedia.org/wiki/142857_%28number%29:
     7 × 142,857 = 999,999 (= 142857 + 857142)
 
 So I just guess it is 142857. And it works.
-
+==========================================
+Coding with brute force solution can be seen in PermutedMultiples.java.
