@@ -1,0 +1,15 @@
+Problem 052:
+It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.
+Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.
+
+From https://en.wikipedia.org/wiki/142857_%28number%29:
+
+    1 × 142,857 = 142,857
+    2 × 142,857 = 285,714
+    3 × 142,857 = 428,571
+    4 × 142,857 = 571,428
+    5 × 142,857 = 714,285
+    6 × 142,857 = 857,142
+    7 × 142,857 = 999,999 (= 142857 + 857142)
+
+So I just guess it is 142857. And it works.
