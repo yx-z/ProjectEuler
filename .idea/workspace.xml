@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a288852a-53eb-4b53-ae09-53c07fba967a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem001/MultiplesOf3And5.class" afterPath="$PROJECT_DIR$/out/Problem001/MultiplesOf3And5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem002/EvenFibonacciNum.class" afterPath="$PROJECT_DIR$/out/Problem002/EvenFibonacciNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem003/LargestPrimeFactor.class" afterPath="$PROJECT_DIR$/out/Problem003/LargestPrimeFactor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem007/Prime10001st.class" afterPath="$PROJECT_DIR$/out/Problem007/Prime10001st.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem052/Ans.txt" afterPath="$PROJECT_DIR$/out/Problem052/Ans.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem001/MultiplesOf3And5.java" afterPath="$PROJECT_DIR$/src/Problem001/MultiplesOf3And5.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem002/EvenFibonacciNum.java" afterPath="$PROJECT_DIR$/src/Problem002/EvenFibonacciNum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem003/LargestPrimeFactor.java" afterPath="$PROJECT_DIR$/src/Problem003/LargestPrimeFactor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem004/LargestPalindromeProduct.java" afterPath="$PROJECT_DIR$/src/Problem004/LargestPalindromeProduct.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem005/SmallestMultiple.java" afterPath="$PROJECT_DIR$/src/Problem005/SmallestMultiple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem006/SumSquareDifference.java" afterPath="$PROJECT_DIR$/src/Problem006/SumSquareDifference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem007/Prime10001st.java" afterPath="$PROJECT_DIR$/src/Problem007/Prime10001st.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem008/LargestProductInSeries.java" afterPath="$PROJECT_DIR$/src/Problem008/LargestProductInSeries.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem009/SpecialPythagoreanTriplet.java" afterPath="$PROJECT_DIR$/src/Problem009/SpecialPythagoreanTriplet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem010/SummationOfPrimes.java" afterPath="$PROJECT_DIR$/src/Problem010/SummationOfPrimes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem011/LargestProductInGrid.java" afterPath="$PROJECT_DIR$/src/Problem011/LargestProductInGrid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java" afterPath="$PROJECT_DIR$/src/Problem012/HighlyDivisibleTriNum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem013/LargeSum.java" afterPath="$PROJECT_DIR$/src/Problem013/LargeSum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem014/LongestCollatzSequence.java" afterPath="$PROJECT_DIR$/src/Problem014/LongestCollatzSequence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="ProjectEuler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,6 +100,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="14" />
     <option name="y" value="23" />
     <option name="width" value="1241" />
     <option name="height" value="777" />
@@ -588,7 +571,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1241" height="777" extended-state="0" />
+    <frame x="14" y="23" width="1241" height="777" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
