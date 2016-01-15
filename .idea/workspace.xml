@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a288852a-53eb-4b53-ae09-53c07fba967a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem052/Ans.txt" afterPath="$PROJECT_DIR$/src/Problem052/Ans.txt" />
-    </list>
+    <list default="true" id="a288852a-53eb-4b53-ae09-53c07fba967a" name="Default" comment="" />
     <ignored path="ProjectEuler.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
