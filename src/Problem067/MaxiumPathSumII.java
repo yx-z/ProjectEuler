@@ -120,6 +120,7 @@ public class MaxiumPathSumII {
         System.out.println("Ans: " + solve(maze));
     }
 
+    //same as 18, dynamic programming method
     private static int solve(int[][] maze) {
         for (int i = maze.length - 2; i >= 0; i--)
             for (int j = 0; j <= i; j++)

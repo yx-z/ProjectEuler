@@ -17,6 +17,7 @@ public class TriPentaHex {
         long penta = 165 + 1;
         long hex = 143 + 1;
 
+        //loop throught the indices of each array
         while (true) {
             long triangle = tri * (tri + 1) / 2;
             long pentagon = penta * (penta * 3 - 1) / 2;

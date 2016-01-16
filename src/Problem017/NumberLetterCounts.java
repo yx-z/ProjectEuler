@@ -3,7 +3,6 @@ package Problem017;
 import java.util.HashMap;
 
 /**
- * Problem 17:
  * If the numbers 1 to 5 are written out in words:
  * one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
  * <p>
@@ -14,7 +13,8 @@ import java.util.HashMap;
  */
 
 public class NumberLetterCounts {
-    private static HashMap<Integer, String> numTrans = new HashMap<Integer, String>(){{
+    //initialize a hashmap to convert numbers to its English
+    private static HashMap<Integer, String> numTrans = new HashMap<Integer, String>() {{
         this.put(0, "");
         this.put(1, "one");
         this.put(2, "two");
@@ -67,19 +67,22 @@ public class NumberLetterCounts {
 
     //1 <= n < 1000
     private static String toStr(int n) {
+        //1~20
         if (n < 20 || (n < 100 && n % 10 == 0) || n % 100 == 0) return numTrans.get(n);
 
         int[] arr = toArr(n);
+        //21~99
         if (n < 100) return numTrans.get(arr[0]) + numTrans.get(arr[1]);
+        //100~119
         if (n % 100 < 20) return numTrans.get(arr[0]) + "and" + numTrans.get(arr[1] + arr[2]);
+        //120~999
         return numTrans.get(arr[0]) + "and" + numTrans.get(arr[1]) + numTrans.get(arr[2]);
     }
 
+    //ex. 123->[1,2,3]
     private static int[] toArr(int n) {
         if (n < 100) return new int[]{n - n % 10, n % 10};
         if (n < 1000) return new int[]{n - n % 100, ((n / 10) % 10) * 10, n % 10};
         return null;
     }
-
-
 }

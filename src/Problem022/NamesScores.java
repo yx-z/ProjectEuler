@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
- * Problem 22:
  * Using names.txt, a 46K text file containing over five-thousand first names, begin by sorting it into alphabetical order.
  * Then working out the alphabetical value for each name, multiply this value by its alphabetical position in the list to obtain a name score.
  * <p>
@@ -23,6 +22,7 @@ public class NamesScores {
         System.out.println("Ans: " + calSum(file));
     }
 
+    //read .txt -> String[]
     private static String[] readFile(String fileName) throws IOException {
         String[] file;
 
@@ -45,6 +45,7 @@ public class NamesScores {
         return ans;
     }
 
+    //an easy method to convert alphabets to numerical value
     public static int calVal(String name) {
         int worth = 0;
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

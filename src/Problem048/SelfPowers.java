@@ -10,6 +10,7 @@ import java.math.BigInteger;
 
 public class SelfPowers {
     public static void main(String[] args) {
+        //brute force
         BigInteger result = new BigInteger("0");
         for (int i = 1; i <= 1000; i++)
             result = result.add(new BigInteger(""+i).pow(i));

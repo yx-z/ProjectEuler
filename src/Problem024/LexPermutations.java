@@ -31,7 +31,8 @@ public class LexPermutations {
     public static void main(String[] args) {
         final int REMAINDER = 1000000;
 
-        //find the indices
+        //find out the indices from the number list so that the number it form will no bigger than REMAINDER
+        //ex. 9! * 2 is smaller than REMAINDER = 100000 but 9! * 3 is bigger
         ArrayList<Integer> index = new ArrayList<>();
         int currentIndex = 0;
         int sum = 0;

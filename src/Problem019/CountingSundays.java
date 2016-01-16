@@ -3,7 +3,6 @@ package Problem019;
 import java.util.HashMap;
 
 /**
- * Problem 19:
  * You are given the following information, but you may prefer to do some research for yourself.
  * <p>
  * 1 Jan 1900 was a Monday.
@@ -19,6 +18,7 @@ import java.util.HashMap;
  */
 
 public class CountingSundays {
+    //convert each month to days count
     private static HashMap<Integer, Integer> daysEachMonth = new HashMap<Integer, Integer>() {{
         this.put(1,31);
         this.put(2,28);
@@ -34,7 +34,7 @@ public class CountingSundays {
         this.put(12,31);
     }};
     public static void main(String[] args) {
-
+        //initial condition
         int year = 1901;
         int month = 1;
         int date = 1;
@@ -42,9 +42,11 @@ public class CountingSundays {
 
         int sum = 0;
 
+        //main loop
         while (year < 2001) {
             int datesThisMonth = daysEachMonth.get(month);
             if (month == 2 && isLeapYear(year)) datesThisMonth++;
+            //date+1
             while (date <= datesThisMonth) {
                 day++;
                 if (day == 7 && date == 1) sum++;
@@ -53,6 +55,7 @@ public class CountingSundays {
             }
             date = 1;
             month++;
+            //year+1
             if (month == 13) {
                 month = 1;
                 year++;

@@ -12,6 +12,7 @@ import java.math.BigInteger;
 
 public class PowDigitSum {
     public static void main(String[] args) {
+        //brute force
         int max = 0;
         for (int a = 0; a < 100; a++)
             for (int b = 0; b < 100; b++)

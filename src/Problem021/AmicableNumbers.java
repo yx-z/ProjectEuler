@@ -3,7 +3,6 @@ package Problem021;
 import java.util.ArrayList;
 
 /**
- * Problem 21:
  * Let d(n) be defined as the sum of proper divisors of n (numbers less than n which divide evenly into n).
  * <p>
  * If d(a) = b and d(b) = a, where a ≠ b, then a and b are an amicable pair and each of a and b are called amicable numbers.
@@ -22,6 +21,7 @@ public class AmicableNumbers {
         System.out.println("Sum: " + sum);
     }
 
+    //get all its divisors
     private static ArrayList<Integer> divisors(int n) {
         ArrayList<Integer> ans = new ArrayList<>();
         int end = n / 2;
@@ -30,6 +30,7 @@ public class AmicableNumbers {
         return ans;
     }
 
+    //add up all nums(in this case, divisors in the ArrayList)
     private static int sum(ArrayList<Integer> arr) {
         int sum = 0;
         for (Integer i : arr)

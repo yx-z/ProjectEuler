@@ -18,13 +18,15 @@ import java.util.HashSet;
  */
 
 public class NonAbundantSums {
-    private static HashSet<Integer> abundants = new HashSet<Integer>();
+    private static HashSet<Integer> abundants = new HashSet<>();
 
     public static void main(String[] args) {
         int sum = 0;
+        //get abundants up to 28123
         for (int i = 12; i <= 28123; i++)
             if (isAbundant(i)) abundants.add(i);
 
+        //get other numbers and add them up
         for (int i = 1; i <= 28123; i++)
             if (!sumOfAbundants(i))
                 sum += i;

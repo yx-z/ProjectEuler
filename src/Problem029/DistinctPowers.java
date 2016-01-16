@@ -20,6 +20,7 @@ import java.util.HashSet;
 
 public class DistinctPowers {
     public static void main(String[] args) {
+        //brute force
         HashSet<BigInteger> ans = new HashSet<>();
         for (int a = 2; a <= 100; a++)
             for (int b = 2; b <= 100; b++)

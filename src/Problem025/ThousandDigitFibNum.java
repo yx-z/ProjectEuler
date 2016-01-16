@@ -33,6 +33,8 @@ public class ThousandDigitFibNum {
         BigInteger a = BigInteger.ONE;
         BigInteger b = BigInteger.ONE;
         BigInteger tmp;
+
+        //main Fibonacci looop
         while(countDigits(a) < 1000 && countDigits(b) < 1000) {
             tmp = a;
             a = b;
@@ -43,6 +45,8 @@ public class ThousandDigitFibNum {
         System.out.println("Index: " + index);
     }
 
+    //get the digit length of a BigInteger
+    //ex. 12 -> 2, 123 -> 3
     private static int countDigits(BigInteger n) {
         return n.toString().length();
     }

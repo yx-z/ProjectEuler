@@ -28,7 +28,6 @@ public class LongestCollatzSequence {
                 max = count;
             }
         }
-
         System.out.println("Start @: " + start);
     }
 

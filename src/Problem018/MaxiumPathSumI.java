@@ -1,7 +1,6 @@
 package Problem018;
 
 /**
- * Problem 18:
  * By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is 23.
  * 3
  * 7 4
@@ -55,6 +54,7 @@ public class MaxiumPathSumI {
         System.out.println("Ans: " + solve(maze));
     }
 
+    //same as 67, dynamic programming method
     private static int solve(int[][] maze) {
         for (int i = maze.length - 2; i >= 0; i--)
             for (int j = 0; j <= i; j++)

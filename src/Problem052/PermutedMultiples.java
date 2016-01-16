@@ -11,11 +11,13 @@ import java.util.HashMap;
 public class PermutedMultiples {
     public static void main(String[] args) {
         int n = 1;
+        //get n until it is permuted multiple
         while (!isPermutedMultiple(n)) n++;
         System.out.println(n);
     }
 
-    private static HashMap<Integer, Integer> getDigits(long num) {
+    //ex. 1123->[0=0,1=2,2=1,3=1,4~9=0]
+    private static HashMap<Integer, Integer> getDigitsCount(long num) {
         HashMap<Integer, Integer> ans = new HashMap<Integer, Integer>() {{
             for (int i = 0; i < 10; i++)
                 this.put(i, 0);
@@ -27,19 +29,21 @@ public class PermutedMultiples {
         }
         return ans;
     }
-
-    private static boolean equalsWithoutOrder(HashMap<Integer, Integer> a, HashMap<Integer, Integer> b) {
+    
+    //check if two hashMap is equal
+    private static boolean equalsEachDigitCount(HashMap<Integer, Integer> a, HashMap<Integer, Integer> b) {
         for (int i = 0; i < 10; i++)
             if (a.get(i) != b.get(i)) return false;
         return true;
     }
 
+    //num, 2 * num , 3 * num, ... , 6 * num are all equalEachDigitCoount
     private static boolean isPermutedMultiple(long num) {
         ArrayList<HashMap<Integer, Integer>> tmp = new ArrayList<>();
         for (int i = 0; i < 6; i++)
-            tmp.add(i, getDigits(num * (i + 1)));
+            tmp.add(i, getDigitsCount(num * (i + 1)));
         for (int i = 0; i < 5; i++)
-            if (!equalsWithoutOrder(tmp.get(i), tmp.get(i + 1))) return false;
+            if (!equalsEachDigitCount(tmp.get(i), tmp.get(i + 1))) return false;
         return true;
     }
 }

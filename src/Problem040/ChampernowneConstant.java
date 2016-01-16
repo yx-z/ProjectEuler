@@ -14,6 +14,7 @@ package Problem040;
 
 public class ChampernowneConstant {
     public static void main(String[] args) {
+        //by using charAt, it is easy to figure out the answer.
         final int UPPER_LIMIT = 1000000;
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i < UPPER_LIMIT; i++)
