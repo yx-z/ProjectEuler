@@ -25,13 +25,14 @@ public class PermutedMultiples {
         String str = "" + num;
         for (int i = 0; i < str.length(); i++) {
             int currentDigit = Integer.parseInt("" + str.charAt(i));
-            ans.replace(currentDigit, ans.get(currentDigit) + 1);
+            ans.replace(currentDigit, ans.get(currentDigit) + 1);//each time plus one of the value to the specific key
         }
         return ans;
     }
-    
+
     //check if two hashMap is equal
     private static boolean equalsEachDigitCount(HashMap<Integer, Integer> a, HashMap<Integer, Integer> b) {
+        if (a.size() != b.size()) return false;
         for (int i = 0; i < 10; i++)
             if (a.get(i) != b.get(i)) return false;
         return true;
