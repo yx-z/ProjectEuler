@@ -26,12 +26,15 @@ package Problem027;
 
 public class QuaPrimes {
     public static void main(String[] args) {
+        final int LIMIT = 1000;
+        //recording the count max consecutive value
         int maxA = 0;
         int maxB = 0;
         int maxN = 0;
 
-        for (int a = -999; a < 1001; a += 2)
-            for (int b = 1; b < 1001; b++)
+        //a += 2 (from a = -999) since 'a' must be odd
+        for (int a = -999; a < LIMIT; a += 2)
+            for (int b = 1; b < LIMIT; b++)
                 if (getQuaPrimesCount(a, b) > maxN) {
                     maxA = a;
                     maxB = b;
@@ -48,6 +51,7 @@ public class QuaPrimes {
         return true;
     }
 
+    //get the count with given 'a', 'b' from n = 0
     private static int getQuaPrimesCount(int a, int b) {
         int n = 0;
         while (isPrime(n * n + a * n + b)) n++;
