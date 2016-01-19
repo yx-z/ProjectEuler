@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ee55b6a-57fc-4c3e-a77e-3d170b112f94" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Problem031/CoinSums.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Problem027/QuaPrimes.class" afterPath="$PROJECT_DIR$/out/Problem027/QuaPrimes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem031/CoinSums.java" afterPath="$PROJECT_DIR$/src/Problem031/CoinSums.java" />
     </list>
     <ignored path="ProjectEuler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +38,8 @@
       <file leaf-file-name="CoinSums.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Problem031/CoinSums.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50442475">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.6902655">
+              <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -747,8 +745,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem031/CoinSums.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50442475">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.6902655">
+          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
           <folding />
         </state>
       </provider>

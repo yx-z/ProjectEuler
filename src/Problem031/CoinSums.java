@@ -16,7 +16,7 @@ public class CoinSums {
     //solve with dynamic programming
     public static void main(String[] args) {
         final int TARGET = 200;
-        int[] coins = { 1, 2, 5, 10, 20, 50, 100, 200 };
+        int[] coins = new int[]{ 1, 2, 5, 10, 20, 50, 100, 200 };
         int[] ways = new int[TARGET+1];
         //base case
         ways[0] = 1;
@@ -24,6 +24,7 @@ public class CoinSums {
         //main loop for DP
         for (int i = 0; i < coins.length; i++)
             for (int j = coins[i]; j <= TARGET; j++)
+                //based on what we have already figured out, add the remaining part with new coins
                 ways[j] += ways[j - coins[i]];
 
         //print out the last one in the ans arr;
