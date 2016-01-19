@@ -11,8 +11,11 @@ import java.util.HashSet;
 
 public class PandigitalPrime {
     public static void main(String[] args) {
-        int num = 7654321;
-        while (!(isPrime(num) && isPandigital(num))) num--;
+        //the real MAX for being a pandigital number is 987654321.
+        //But my algorithm will take a long time and unfortunately I have to shrink the upper bound.
+        final int MAX = 7654321;
+        int num = MAX;
+        while (!isPrime(num) || !isPandigital(num)) num-=2;
         System.out.println(num);
     }
 
