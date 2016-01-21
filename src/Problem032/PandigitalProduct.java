@@ -21,7 +21,7 @@ public class PandigitalProduct {
         HashSet<Long> ans = new HashSet<>();
         //main loop
         for (int i = 2; i < 10000; i++)
-            //set bounds for j: when i has 1 digit, then j must has 4 digits ex: 1 * 1234 = 1234 -> 112341234 has 9 digits
+            //set bounds for j. ex: when i has 1 digit, then j must has 4 digits ex: 1 * 1234 = 1234 -> 112341234 has 9 digits
             for (int j = 10000 / i; j > i; j--) {
                 long product = i * j;
                 if (isOneToNinePandigital(concat(i, concat(j, product)))) ans.add(product);
