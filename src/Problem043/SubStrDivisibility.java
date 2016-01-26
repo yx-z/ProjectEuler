@@ -44,7 +44,7 @@ public class SubStrDivisibility {
                             concat(previous[2] % 10, concat(previous[3] % 10,
                                     concat(previous[4] % 10, concat(previous[5] % 10, previous[6] % 10))))));
             if (!distinct(n)) return;
-            long panditials = make_panditials(n);
+            long panditials = makePanditials(n);
             if (n == panditials) return;
             sum += panditials;
             return;
@@ -70,9 +70,9 @@ public class SubStrDivisibility {
         return true;
     }
 
-    public static long make_panditials(long n) {
+    public static long makePanditials(long n) {
         boolean[] digits = new boolean[10];
-        long origN = n, newN = 0L;
+        long oriNum = n, newNum = 0L;
 
         while (n > 0) {
             digits[(int) n % 10] = true;
@@ -81,12 +81,11 @@ public class SubStrDivisibility {
 
         for (long i = 0; i < 10; i++)
             if (!digits[(int) i]) {
-                if (newN != 0) return origN;
-                newN = concat(i, origN);
+                if (newNum != 0) return oriNum;
+                newNum = concat(i, oriNum);
             }
 
-        return newN != 0 ? newN : origN;
-    }
+        return newNum != 0 ? newNum : oriNum;    }
 
     //util method for concatinating two nums
     public static long concat(long a, long b) {
