@@ -20,6 +20,7 @@ import java.util.HashSet;
 
 public class DistinctPrimesFact {
     public static void main(String[] args) {
+        //start num must at least has four distinct prime factors
         int n = 2 * 3 * 5 * 7;
         while (!fourConsecutive(n)) n++;
         System.out.println(n);
