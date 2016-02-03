@@ -41,7 +41,7 @@ public class PasscodeDerivation {
         HashSet<Integer> ignoreSet = new HashSet<>();
         for (int i = 0; i < 10; i++)
             if (after.get(i).isEmpty() && before.get(i).isEmpty()) ignoreSet.add(i);
-        //..., and remove them
+        //..., and remove them.
         for (int i : ignoreSet) after.remove(i);
 
         //main loop for constructing the ans by appending nums with most priority first
