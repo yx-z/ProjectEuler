@@ -38,8 +38,8 @@ public class XorDecrypt {
         byte[] key = {(byte) 'a', (byte) 'a', (byte) 'a'};
 
         //iterate through all keys
-        for (int i = 0; i < 26; i++) {
-            for (int j = 0; j < 26; j++) {
+        for (int i = 0; i < 26; i++)
+            for (int j = 0; j < 26; j++)
                 for (int k = 0; k < 26; k++) {
                     key[0] = (byte) ('a' + i);
                     key[1] = (byte) ('a' + j);
@@ -51,8 +51,6 @@ public class XorDecrypt {
                         bestDecrypted = decrpyted;
                     }
                 }
-            }
-        }
 
         //add ascii value
         int sum = 0;
@@ -91,11 +89,11 @@ public class XorDecrypt {
         for (int i = 0; i < b.length; i++) {
             char c = (char) b[i];
             if (c >= 'A' && c <= 'Z')
-                sum += 1;  // Uppercase letters are good
+                sum += 1;//uppercase: good
             else if (c >= 'a' && c <= 'z')
-                sum += 2;  // Lowercase letters are excellent
+                sum += 1;//lowercase: great
             else if (c < 0x20 || c == 0x7F)
-                sum -= 1;  // Control characters are  bad
+                sum -= 1;//other characters: bad
         }
         return sum;
     }
