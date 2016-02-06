@@ -1,6 +1,8 @@
 package Problem054;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * In the card game poker, a hand consists of five cards and are ranked, from lowest to highest, in the following way:
@@ -34,23 +36,22 @@ import java.io.*;
  */
 
 public class PokerHands {
-    private static final int ROUNDS = 1000;
-
     public static void main(String[] args) throws IOException {
         int count = 0;
-        Round[] input = readFile("src/Problem054/poker.txt");
-        for (Round r : input) count += r.winner1();
+        ArrayList<Round> input = readFile("src/Problem054/poker.txt");
+        for (int i = 0; i < input.size(); i++)
+            if (input.get(i).getWinner() == 1) count++;
         System.out.println(count);
     }
 
     //read 1000 rounds from .txt
-    private static Round[] readFile(String fileName) throws IOException {
-        Round[] input = new Round[ROUNDS];
+    private static ArrayList<Round> readFile(String fileName) throws IOException {
+        ArrayList<Round> input = new ArrayList<>();
         FileInputStream fileInputStream = new FileInputStream(fileName);
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
         String line;
-        int lineNum = 0;
         while ((line = bufferedReader.readLine()) != null) {
+            line = line.toUpperCase();
             String[] lineArr = line.split(" ");
             Card[] player1 = new Card[5];
             Card[] player2 = new Card[5];
@@ -58,15 +59,14 @@ public class PokerHands {
                 player1[i] = new Card(lineArr[i]);
                 player2[i] = new Card(lineArr[i + 5]);
             }
-            input[lineNum] = new Round(new Hand(player1), new Hand(player2));
-            lineNum++;
+            input.add(new Round(new Hand(player1), new Hand(player2)));
         }
         return input;
     }
 }
 
 //assume all inputs are legal as the problem stated
-class Card {
+class Card implements Comparable {
     int val;
     char suit;
 
@@ -82,61 +82,53 @@ class Card {
 
         this.suit = s.charAt(1);
     }
+
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof Card) {
+            Card c = (Card) o;
+            return this.val - c.val;
+        }
+        return -1;
+    }
 }
 
 //an array(presumably of size 5) of cards
-class Hand {
+class Hand implements Comparable {
     Card[] hand;
+    int score;
 
     Hand(Card[] c) {
         this.hand = c;
-        sortCardByNum();
+        Arrays.sort(c);
     }
 
-    //implementd by insertion sort for convenience, from small val to big ones
-    void sortCardByNum() {
-        for (int i = 1; i < hand.length; i++) {
-            Card key = hand[i];
-            int j;
-            for (j = i - 1; j >= 0 && key.val < hand[j].val; j--)
-                hand[j + 1] = hand[j];
-            hand[j + 1] = key;
-        }
-    }
-
-    //hevy lifting here...
+    //heavy lifting here...
     int getScore() {
         //score with 6 digits in HEX(so as to contain more combinations):
         //Bit 5 to Bit 1: each digit represents the next index for comparing
-        int score = convertDigitsToScore();
-        //Most Significant Bit for Level of the card, i.e. straight, full house etc., from 9(high) to 0(low)
-        if (royalFlush()) score += 0x900000;
-        else if (straightFlush()) score += 0x800000;
-        else if (fourOfAKind() != 0) score = 0x700000 + fourOfAKind();
-        else if (fullHouse() != 0) score = 0x600000 + fullHouse();
+        score = convertDigitsToScore();
+        //Most Significant Bit for Level of the card, i.e. straight, full house etc., from 8(high) to 0(low)
+        if (straightFlush()) score += 0x800000;
+        else if (fourOfAKind() != 0) score = 0x700000 + (fourOfAKind() << 16);
+        else if (fullHouse() != 0) score = 0x600000 + (fullHouse() << 16);
         else if (flush()) score += 0x500000;
         else if (straight()) score += 0x400000;
-        else if (threeOfAKind() != 0) score = 0x300000 + threeOfAKind();
-        else if (twoPairs() != null) score = 0x200000 + twoPairs()[0] * 256 + twoPairs()[1] * 16 + twoPairs()[2];
-        else if (onePair() != null) score = 0x100000 + onePair()[0] * 16 * 256 + onePair()[1] * 256 + onePair()[2] * 16 + onePair()[3];
+        else if (threeOfAKind() != 0) score = 0x300000 + (threeOfAKind() << 16);
+        else if (twoPairs() != null)
+            score = 0x200000 + (twoPairs()[0] << 16) + (twoPairs()[1] << 12) + (twoPairs()[2] << 8);
+        else if (onePair() != null)
+            score = 0x100000 + (onePair()[0] << 16) + (onePair()[1] << 12) + (onePair()[2] << 8) + (onePair()[3] << 4);
 
         return score;
     }
 
-    //get value
+    //get base value
     int convertDigitsToScore() {
         int sum = 0;
         for (int i = hand.length - 1; i >= 0; i--)
-            sum += hand[i].val * Math.pow(16, i);
+            sum += (hand[i].val << (4 * i));
         return sum;
-    }
-
-    boolean royalFlush() {
-        if (!flush()) return false;
-        int sum = 0;
-        for (Card c : hand) sum += c.val;
-        //since values of royal flush card set are always the biggest
-        return sum == 10 + 11 + 12 + 13 + 14;
     }
 
     boolean flush() {
@@ -187,7 +179,7 @@ class Hand {
             }
         }
         if (hand[1].val == hand[2].val && hand[3].val == hand[4].val) {
-            return new int[]{Math.min(hand[1].val, hand[3].val), Math.min(hand[1].val, hand[3].val), hand[0].val};
+            return new int[]{Math.max(hand[1].val, hand[3].val), Math.min(hand[1].val, hand[3].val), hand[0].val};
         }
         return null;
     }
@@ -197,39 +189,30 @@ class Hand {
         boolean found = false;
         for (i = 0; i < 4; i++) {
             if (hand[i].val == hand[i + 1].val) {
-                found= true;
+                found = true;
                 break;
             }
         }
         if (found) {
             int[] ans = new int[4];
             ans[0] = hand[i].val;
-            if (i == 0) {
-                ans[1] = hand[2].val;
-                ans[2] = hand[3].val;
-                ans[3] = hand[4].val;
-                return ans;
+            int index = 0;
+            for (int j = 0; j < 3; j++) {
+                if (j == i) index += 2;
+                ans[j + 1] = hand[index++].val;
             }
-            if (i == 1) {
-                ans[1] = hand[0].val;
-                ans[2] = hand[3].val;
-                ans[3] = hand[4].val;
-                return ans;
-            }
-            if (i == 2) {
-                ans[1] = hand[0].val;
-                ans[2] = hand[1].val;
-                ans[3] = hand[4].val;
-                return ans;
-            }
-            if (i == 3) {
-                ans[1] = hand[0].val;
-                ans[2] = hand[1].val;
-                ans[3] = hand[2].val;
-                return ans;
-            }
+            return ans;
         }
         return null;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof Hand) {
+            Hand h = (Hand) o;
+            return this.getScore() > h.getScore() ? 1 : -1;
+        }
+        return -1;
     }
 }
 
@@ -244,7 +227,7 @@ class Round {
     }
 
     //get winner
-    int winner1() {
-        return player1.getScore() > player2.getScore() ? 1 : 0;
+    int getWinner() {
+        return player1.compareTo(player2) > 0 ? 1 : 2;
     }
 }
