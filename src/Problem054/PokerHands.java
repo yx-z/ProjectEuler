@@ -109,16 +109,16 @@ class Hand implements Comparable {
         //Bit 5 to Bit 1: each digit represents the next index for comparing
         score = convertDigitsToScore();
         //Most Significant Bit for Level of the card, i.e. straight, full house etc., from 8(high) to 0(low)
-        if (straightFlush()) score += 0x800000;
-        else if (fourOfAKind() != 0) score = 0x700000 + (fourOfAKind() << 16);
-        else if (fullHouse() != 0) score = 0x600000 + (fullHouse() << 16);
-        else if (flush()) score += 0x500000;
-        else if (straight()) score += 0x400000;
-        else if (threeOfAKind() != 0) score = 0x300000 + (threeOfAKind() << 16);
+        if (straightFlush()) score = score | 0x800000;
+        else if (fourOfAKind() != 0) score = 0x700000 | (fourOfAKind() << 16);
+        else if (fullHouse() != 0) score = 0x600000 | (fullHouse() << 16);
+        else if (flush()) score = score | 0x500000;
+        else if (straight()) score = score | 0x400000;
+        else if (threeOfAKind() != 0) score = 0x300000 | (threeOfAKind() << 16);
         else if (twoPairs() != null)
-            score = 0x200000 + (twoPairs()[0] << 16) + (twoPairs()[1] << 12) + (twoPairs()[2] << 8);
+            score = 0x200000 | (twoPairs()[0] << 16) | (twoPairs()[1] << 12) | (twoPairs()[2] << 8);
         else if (onePair() != null)
-            score = 0x100000 + (onePair()[0] << 16) + (onePair()[1] << 12) + (onePair()[2] << 8) + (onePair()[3] << 4);
+            score = 0x100000 | (onePair()[0] << 16) | (onePair()[1] << 12) | (onePair()[2] << 8) | (onePair()[3] << 4);
 
         return score;
     }
@@ -127,7 +127,7 @@ class Hand implements Comparable {
     int convertDigitsToScore() {
         int sum = 0;
         for (int i = hand.length - 1; i >= 0; i--)
-            sum += (hand[i].val << (4 * i));
+            sum = sum | (hand[i].val << (4 * i));
         return sum;
     }
 
