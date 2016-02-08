@@ -36,198 +36,374 @@ import java.util.Arrays;
  */
 
 public class PokerHands {
-    public static void main(String[] args) throws IOException {
-        int count = 0;
-        ArrayList<Round> input = readFile("src/Problem054/poker.txt");
-        for (int i = 0; i < input.size(); i++)
-            if (input.get(i).getWinner() == 1) count++;
-        System.out.println(count);
-    }
+	public static void main(String[] args) throws IOException {
+		int count = 0;
+		ArrayList<Round> input = readFile("src/Problem054/poker.txt");
+		int i = 0;
+		for (Round anInput : input) {
+			i++;
+			System.out.println("Round " + i + ":\n" + anInput + "\n");
+			if (anInput.getWinner() == 1) count++;
+		}
+		System.out.println("Count: " + count);
+	}
 
-    //read 1000 rounds from .txt
-    private static ArrayList<Round> readFile(String fileName) throws IOException {
-        ArrayList<Round> input = new ArrayList<>();
-        FileInputStream fileInputStream = new FileInputStream(fileName);
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-            line = line.toUpperCase();
-            String[] lineArr = line.split(" ");
-            Card[] player1 = new Card[5];
-            Card[] player2 = new Card[5];
-            for (int i = 0; i < 5; i++) {
-                player1[i] = new Card(lineArr[i]);
-                player2[i] = new Card(lineArr[i + 5]);
-            }
-            input.add(new Round(new Hand(player1), new Hand(player2)));
-        }
-        return input;
-    }
+	//read 1000 rounds from .txt
+	private static ArrayList<Round> readFile(String fileName) throws IOException {
+		ArrayList<Round> input = new ArrayList<>();
+		FileInputStream fileInputStream = new FileInputStream(fileName);
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
+		String line;
+		while ((line = bufferedReader.readLine()) != null) {
+			String[] lineArr = line.split(" ");
+			Card[] player1 = new Card[5];
+			Card[] player2 = new Card[5];
+			for (int i = 0; i < 5; i++) {
+				player1[i] = new Card(lineArr[i]);
+				player2[i] = new Card(lineArr[i + 5]);
+			}
+			input.add(new Round(new Hand(player1), new Hand(player2)));
+		}
+		return input;
+	}
 }
 
 //assume all inputs are legal as the problem stated
 class Card implements Comparable {
-    int val;
-    char suit;
+	private int val;
+	private char suit;
 
-    //constructor: Val-Suit, ex. "8C", "TD"
-    Card(String s) {
-        char val = s.charAt(0);
-        if (val == 'T') this.val = 10;
-        else if (val == 'J') this.val = 11;
-        else if (val == 'Q') this.val = 12;
-        else if (val == 'K') this.val = 13;
-        else if (val == 'A') this.val = 14;
-        else this.val = val - '0';
+	//constructor: ValSuit, ex. "8C", "TD", etc.
+	public Card(String s) {
+		if (s.length() != 2) return;
+		s = s.toUpperCase();
+		char val = s.charAt(0);
+		switch (val) {
+			case 'T':
+				this.val = 0xA;
+				break;
+			case 'J':
+				this.val = 0xB;
+				break;
+			case 'Q':
+				this.val = 0xC;
+				break;
+			case 'K':
+				this.val = 0xD;
+				break;
+			case 'A':
+				this.val = 0xE;
+				break;
+			default:
+				if (val >= '2' && val <= '9') this.val = val - '0';
+				break;
+		}
 
-        this.suit = s.charAt(1);
-    }
+		char suit = s.charAt(1);
+		if (suit == 'D' || suit == 'S' || suit == 'C' || suit == 'H') this.suit = s.charAt(1);
+	}
 
-    @Override
-    public int compareTo(Object o) {
-        if (o instanceof Card) {
-            Card c = (Card) o;
-            return this.val - c.val;
-        }
-        return -1;
-    }
+	@Override
+	public int compareTo(Object o) {
+		if (o instanceof Card) {
+			Card c = (Card) o;
+			if (this.getVal() == c.getVal()) return 0;
+			return this.getVal() > c.getVal() ? 1 : -1;
+		}
+		return -2;
+	}
+
+	@Override
+	public String toString() {
+		String str;
+		switch (this.getSuit()) {
+			case 'S':
+				str = "♠";
+				break;
+			case 'D':
+				str = "♦";
+				break;
+			case 'H':
+				str = "♥";
+				break;
+			case 'C':
+				str = "♣";
+				break;
+			default:
+				str = "";
+				break;
+		}
+		switch (val) {
+			case 0xA:
+				str += "T";
+				break;
+			case 0xB:
+				str += "J";
+				break;
+			case 0xC:
+				str += "Q";
+				break;
+			case 0xD:
+				str += "K";
+				break;
+			case 0xE:
+				str += "A";
+				break;
+			default:
+				str += "" + val;
+				break;
+		}
+		return str;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof Card)) return false;
+
+		Card card = (Card) o;
+
+		return getVal() == card.getVal() && getSuit() == card.getSuit();
+	}
+
+	@Override
+	public int hashCode() {
+		int result = getVal();
+		result = 31 * result + (int) getSuit();
+		return result;
+	}
+
+	public int getVal() {
+		return val;
+	}
+
+	public char getSuit() {
+		return suit;
+	}
 }
 
-//an array(presumably of size 5) of cards
+//an array (presumably of size 5) of cards
 class Hand implements Comparable {
-    Card[] hand;
-    int score;
+	private Card[] hand;
+	private int score;
 
-    Hand(Card[] c) {
-        this.hand = c;
-        Arrays.sort(c);
-    }
+	public Hand(Card[] c) throws NullPointerException {
+		if (c.length != 5) return;
+		this.hand = c;
+		Arrays.sort(c);
+		//check exception for duplicated cards
+		for (int i = 0; i < c.length - 1; i++)
+			if (c[i].equals(c[i + 1])) return;
 
-    //heavy lifting here...
-    int getScore() {
-        //score with 6 digits in HEX(so as to contain more combinations):
-        //Bit 5 to Bit 1: each digit represents the next index for comparing
-        score = convertDigitsToScore();
-        //Most Significant Bit for Level of the card, i.e. straight, full house etc., from 8(high) to 0(low)
-        if (straightFlush()) score = score | 0x800000;
-        else if (fourOfAKind() != 0) score = 0x700000 | (fourOfAKind() << 16);
-        else if (fullHouse() != 0) score = 0x600000 | (fullHouse() << 16);
-        else if (flush()) score = score | 0x500000;
-        else if (straight()) score = score | 0x400000;
-        else if (threeOfAKind() != 0) score = 0x300000 | (threeOfAKind() << 16);
-        else if (twoPairs() != null)
-            score = 0x200000 | (twoPairs()[0] << 16) | (twoPairs()[1] << 12) | (twoPairs()[2] << 8);
-        else if (onePair() != null)
-            score = 0x100000 | (onePair()[0] << 16) | (onePair()[1] << 12) | (onePair()[2] << 8) | (onePair()[3] << 4);
+	    /* init. score */
+		//score with 6 digits in HEX(so as to contain more combinations):
+		//Bit 5 to Bit 1: each digit represents the next index for comparing
+		score = convertDigitsToScore();
+		//Most Significant Bit for Level of the card, i.e. straight, full house etc., from 8(high) to 0(low)
+		if (isStraightFlush()) score = score | 0x800000;
+		else if (isFourOfAKind()) score = 0x700000 | modifyScore(fourOfAKind());
+		else if (isFullHouse()) score = 0x600000 | modifyScore(threeOfAKind());
+		else if (isFlush()) score = score | 0x500000;
+		else if (isStraight()) score = score | 0x400000;
+		else if (isThreeOfAKind()) score = 0x300000 | modifyScore(threeOfAKind());
+		else if (isTwoPairs())
+			score = 0x200000 | modifyScore(twoPairs());
+		else if (isOnePair())
+			score = 0x100000 | modifyScore(onePair());
+	}
 
-        return score;
-    }
+	//if there are cards with same value, their combination value more, i.e. "♦2 ♠2" values more than "♠A"
+	private static int modifyScore(int[] arr) {
+		int modification = 0;
+		for (int i = 0; i < arr.length; i++)
+			modification |= arr[i] << ((4 - i) * 4);
+		return modification;
+	}
 
-    //get base value
-    int convertDigitsToScore() {
-        int sum = 0;
-        for (int i = hand.length - 1; i >= 0; i--)
-            sum = sum | (hand[i].val << (4 * i));
-        return sum;
-    }
+	public Card[] getHand() {
+		return hand;
+	}
 
-    boolean flush() {
-        char baseSuit = hand[0].suit;
-        for (int i = 1; i < hand.length; i++)
-            if (hand[i].suit != baseSuit) return false;
-        return true;
-    }
+	public int getScore() {
+		return score;
+	}
 
-    boolean straightFlush() {
-        return flush() && straight();
-    }
+	//get base value
+	private int convertDigitsToScore() {
+		int sum = 0;
+		for (int i = hand.length - 1; i >= 0; i--)
+			sum = sum | (hand[i].getVal() << (4 * i));
+		return sum;
+	}
 
-    int fourOfAKind() {
-        for (int i = 0; i < 2; i++)
-            if (hand[i].val == hand[i + 1].val && hand[i + 1].val == hand[i + 2].val && hand[i + 2].val == hand[i + 3].val)
-                return hand[i].val;
-        return 0;
-    }
+	public boolean isFlush() {
+		char baseSuit = hand[0].getSuit();
+		for (int i = 1; i < hand.length; i++)
+			if (hand[i].getSuit() != baseSuit) return false;
+		return true;
+	}
 
-    int fullHouse() {
-        if (hand[0].val == hand[1].val && hand[1].val == hand[2].val && hand[3].val == hand[4].val)
-            return hand[0].val;
-        if (hand[0].val == hand[1].val && hand[2].val == hand[3].val && hand[3].val == hand[4].val)
-            return hand[2].val;
-        return 0;
-    }
+	public boolean isStraightFlush() {
+		return isFlush() && isStraight();
+	}
 
-    boolean straight() {
-        for (int i = 0; i < hand.length - 1; i++)
-            if (hand[i + 1].val - hand[i].val != 1) return false;
-        return true;
-    }
+	public boolean isFourOfAKind() {
+		return this.fourOfAKind() != null;
+	}
 
-    int threeOfAKind() {
-        for (int i = 0; i < 3; i++)
-            if (hand[i].val == hand[i + 1].val && hand[i + 1].val == hand[i + 2].val) return hand[i].val;
-        return 0;
-    }
+	private int[] fourOfAKind() {
+		for (int i = 0; i < 2; i++)
+			if (hand[i].getVal() == hand[i + 1].getVal() && hand[i + 1].getVal() == hand[i + 2].getVal() && hand[i + 2].getVal() == hand[i + 3].getVal())
+				return new int[]{hand[i].getVal()};
+		return null;
+	}
 
-    int[] twoPairs() {
-        if (hand[0].val == hand[1].val) {
-            if (hand[2].val == hand[3].val) {
-                return new int[]{Math.max(hand[0].val, hand[2].val), Math.min(hand[0].val, hand[2].val), hand[4].val};
-            }
-            if (hand[3].val == hand[4].val) {
-                return new int[]{Math.max(hand[0].val, hand[3].val), Math.min(hand[0].val, hand[3].val), hand[2].val};
-            }
-        }
-        if (hand[1].val == hand[2].val && hand[3].val == hand[4].val) {
-            return new int[]{Math.max(hand[1].val, hand[3].val), Math.min(hand[1].val, hand[3].val), hand[0].val};
-        }
-        return null;
-    }
+	public boolean isFullHouse() {
+		return this.fullHouse() != null;
+	}
 
-    int[] onePair() {
-        int i;
-        boolean found = false;
-        for (i = 0; i < 4; i++) {
-            if (hand[i].val == hand[i + 1].val) {
-                found = true;
-                break;
-            }
-        }
-        if (found) {
-            int[] ans = new int[4];
-            ans[0] = hand[i].val;
-            int index = 0;
-            for (int j = 0; j < 3; j++) {
-                if (j == i) index += 2;
-                ans[j + 1] = hand[index++].val;
-            }
-            return ans;
-        }
-        return null;
-    }
+	private int[] fullHouse() {
+		if (hand[0].getVal() == hand[1].getVal() && hand[1].getVal() == hand[2].getVal() && hand[3].getVal() == hand[4].getVal())
+			return new int[]{hand[0].getVal()};
+		if (hand[0].getVal() == hand[1].getVal() && hand[2].getVal() == hand[3].getVal() && hand[3].getVal() == hand[4].getVal())
+			return new int[]{hand[2].getVal()};
+		return null;
+	}
 
-    @Override
-    public int compareTo(Object o) {
-        if (o instanceof Hand) {
-            Hand h = (Hand) o;
-            return this.getScore() > h.getScore() ? 1 : -1;
-        }
-        return -1;
-    }
+	public boolean isStraight() {
+		for (int i = 0; i < hand.length - 1; i++)
+			if (hand[i + 1].getVal() - hand[i].getVal() != 1) return false;
+		return true;
+	}
+
+	public boolean isThreeOfAKind() {
+		return this.threeOfAKind() != null;
+	}
+
+	private int[] threeOfAKind() {
+		for (int i = 0; i < 3; i++)
+			if (hand[i].getVal() == hand[i + 1].getVal() && hand[i + 1].getVal() == hand[i + 2].getVal())
+				return new int[]{hand[i].getVal()};
+		return null;
+	}
+
+	public boolean isTwoPairs() {
+		return this.twoPairs() != null;
+	}
+
+	private int[] twoPairs() {
+		if (hand[0].getVal() == hand[1].getVal()) {
+			if (hand[2].getVal() == hand[3].getVal()) {
+				return new int[]{Math.max(hand[0].getVal(), hand[2].getVal()), Math.min(hand[0].getVal(), hand[2].getVal()), hand[4].getVal()};
+			}
+			if (hand[3].getVal() == hand[4].getVal()) {
+				return new int[]{Math.max(hand[0].getVal(), hand[3].getVal()), Math.min(hand[0].getVal(), hand[3].getVal()), hand[2].getVal()};
+			}
+		}
+		if (hand[1].getVal() == hand[2].getVal() && hand[3].getVal() == hand[4].getVal()) {
+			return new int[]{Math.max(hand[1].getVal(), hand[3].getVal()), Math.min(hand[1].getVal(), hand[3].getVal()), hand[0].getVal()};
+		}
+		return null;
+	}
+
+	public boolean isOnePair() {
+		return this.onePair() != null;
+	}
+
+	private int[] onePair() {
+		int i;
+		boolean found = false;
+		for (i = 0; i < 4; i++) {
+			if (hand[i].getVal() == hand[i + 1].getVal()) {
+				found = true;
+				break;
+			}
+		}
+		if (found) {
+			int[] ans = new int[4];
+			ans[0] = hand[i].getVal();
+			int index = 4;
+			for (int j = 1; j < 4; j++) {
+				if (j == i) index -= 2;
+				ans[j] = hand[index--].getVal();
+			}
+			return ans;
+		}
+		return null;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		if (o instanceof Hand) {
+			Hand h = (Hand) o;
+			if (this.getScore() == h.getScore()) return 0;
+			return this.getScore() > h.getScore() ? 1 : -1;
+		}
+		return -2;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof Hand)) return false;
+
+		Hand hand1 = (Hand) o;
+
+		if (getScore() != hand1.getScore()) return false;
+		return Arrays.equals(getHand(), hand1.getHand());
+	}
+
+	@Override
+	public int hashCode() {
+		int result = Arrays.hashCode(getHand());
+		result = 31 * result + getScore();
+		return result;
+	}
+
+	@Override
+	public String toString() {
+		String str = "";
+		boolean omitSpace = true;
+		for (Card c : hand) {
+			if (omitSpace) omitSpace = false;
+			else str += " ";
+
+			str += c.toString();
+		}
+		return str;
+	}
 }
 
 //two hands from two players
 class Round {
-    Hand player1;
-    Hand player2;
+	private Hand player1;
+	private Hand player2;
 
-    Round(Hand p1, Hand p2) {
-        player1 = p1;
-        player2 = p2;
-    }
+	public Round(Hand p1, Hand p2) {
+		//exception for duplicated cards
+		for (int i = 0; i < p1.getHand().length; i++)
+			for (int j = 0; j < p2.getHand().length; j++)
+				if (p1.getHand()[i].equals(p2.getHand()[j])) return;
+		player1 = p1;
+		player2 = p2;
+	}
 
-    //get winner
-    int getWinner() {
-        return player1.compareTo(player2) > 0 ? 1 : 2;
-    }
+	//get winner
+	public int getWinner() {
+		switch (player1.compareTo(player2)) {
+			case 1:
+				return 1;
+			case -1:
+				return 2;
+			case 0:
+				return 0;
+			default:
+				return -1;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Player1: " + player1.toString() + "\n" + "Player2: " + player2.toString() + "\n" + "Winner: " + getWinner();
+	}
 }
