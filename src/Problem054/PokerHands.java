@@ -39,16 +39,16 @@ public class PokerHands {
 	public static void main(String[] args) throws IOException {
 		int count = 0;
 		ArrayList<Round> input = readFile("src/Problem054/poker.txt");
-		int i = 0;
-		for (Round anInput : input) {
-			i++;
-			System.out.println("Round " + i + ":\n" + anInput + "\n");
-			if (anInput.getWinner() == 1) count++;
+		int round = 0;
+		for (Round r : input) {
+			round++;
+			System.out.println("Round " + round + ":\n" + r + "\n");
+			if (r.getWinner() == 1) count++;
 		}
 		System.out.println("Count: " + count);
 	}
 
-	//read 1000 rounds from .txt
+	//read rounds from .txt
 	private static ArrayList<Round> readFile(String fileName) throws IOException {
 		ArrayList<Round> input = new ArrayList<>();
 		FileInputStream fileInputStream = new FileInputStream(fileName);
@@ -69,14 +69,15 @@ public class PokerHands {
 }
 
 //assume all inputs are legal as the problem stated
-class Card implements Comparable {
+class Card implements Comparable<Card> {
 	private int val;
 	private char suit;
 
 	//constructor: ValSuit, ex. "8C", "TD", etc.
 	public Card(String s) {
+		//try to accept most cases
+		s = s.toUpperCase().replaceAll(" ", "");
 		if (s.length() != 2) return;
-		s = s.toUpperCase();
 		char val = s.charAt(0);
 		switch (val) {
 			case 'T':
@@ -104,13 +105,8 @@ class Card implements Comparable {
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		if (o instanceof Card) {
-			Card c = (Card) o;
-			if (this.getVal() == c.getVal()) return 0;
-			return this.getVal() > c.getVal() ? 1 : -1;
-		}
-		return -2;
+	public int compareTo(Card c) {
+		return this.getVal() - c.getVal();
 	}
 
 	@Override
@@ -183,7 +179,7 @@ class Card implements Comparable {
 }
 
 //an array (presumably of size 5) of cards
-class Hand implements Comparable {
+class Hand implements Comparable<Hand> {
 	private Card[] hand;
 	private int score;
 
@@ -198,21 +194,20 @@ class Hand implements Comparable {
 	    /* init. score */
 		//score with 6 digits in HEX(so as to contain more combinations):
 		//Bit 5 to Bit 1: each digit represents the next index for comparing
+		//get base score only by value (withou combination)
 		score = convertDigitsToScore();
-		//Most Significant Bit for Level of the card, i.e. straight, full house etc., from 8(high) to 0(low)
-		if (isStraightFlush()) score = score | 0x800000;
+		//Most Significant Bit for Level of the combination of cards, i.e. straight, full house etc., from 8(high) to 0(low, default)
+		if (isStraightFlush()) score = score | 0x800000; //this includes royal straight flush
 		else if (isFourOfAKind()) score = 0x700000 | modifyScore(fourOfAKind());
 		else if (isFullHouse()) score = 0x600000 | modifyScore(threeOfAKind());
 		else if (isFlush()) score = score | 0x500000;
 		else if (isStraight()) score = score | 0x400000;
 		else if (isThreeOfAKind()) score = 0x300000 | modifyScore(threeOfAKind());
-		else if (isTwoPairs())
-			score = 0x200000 | modifyScore(twoPairs());
-		else if (isOnePair())
-			score = 0x100000 | modifyScore(onePair());
+		else if (isTwoPairs()) score = 0x200000 | modifyScore(twoPairs());
+		else if (isOnePair()) score = 0x100000 | modifyScore(onePair());
 	}
 
-	//if there are cards with same value, their combination value more, i.e. "♦2 ♠2" values more than "♠A"
+	//if there are cards with the same value, their combination value more, i.e. "♦3 ♠3" values more than single "♠A"
 	private static int modifyScore(int[] arr) {
 		int modification = 0;
 		for (int i = 0; i < arr.length; i++)
@@ -293,16 +288,13 @@ class Hand implements Comparable {
 
 	private int[] twoPairs() {
 		if (hand[0].getVal() == hand[1].getVal()) {
-			if (hand[2].getVal() == hand[3].getVal()) {
+			if (hand[2].getVal() == hand[3].getVal())
 				return new int[]{Math.max(hand[0].getVal(), hand[2].getVal()), Math.min(hand[0].getVal(), hand[2].getVal()), hand[4].getVal()};
-			}
-			if (hand[3].getVal() == hand[4].getVal()) {
+			if (hand[3].getVal() == hand[4].getVal())
 				return new int[]{Math.max(hand[0].getVal(), hand[3].getVal()), Math.min(hand[0].getVal(), hand[3].getVal()), hand[2].getVal()};
-			}
 		}
-		if (hand[1].getVal() == hand[2].getVal() && hand[3].getVal() == hand[4].getVal()) {
+		if (hand[1].getVal() == hand[2].getVal() && hand[3].getVal() == hand[4].getVal())
 			return new int[]{Math.max(hand[1].getVal(), hand[3].getVal()), Math.min(hand[1].getVal(), hand[3].getVal()), hand[0].getVal()};
-		}
 		return null;
 	}
 
@@ -333,13 +325,8 @@ class Hand implements Comparable {
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		if (o instanceof Hand) {
-			Hand h = (Hand) o;
-			if (this.getScore() == h.getScore()) return 0;
-			return this.getScore() > h.getScore() ? 1 : -1;
-		}
-		return -2;
+	public int compareTo(Hand h) {
+		return this.getScore() - h.getScore();
 	}
 
 	@Override
@@ -390,16 +377,9 @@ class Round {
 
 	//get winner
 	public int getWinner() {
-		switch (player1.compareTo(player2)) {
-			case 1:
-				return 1;
-			case -1:
-				return 2;
-			case 0:
-				return 0;
-			default:
-				return -1;
-		}
+		if (player1.compareTo(player2) > 0) return 1;
+		else if (player1.compareTo(player2) == 0) return 0;
+		return 2;
 	}
 
 	@Override
