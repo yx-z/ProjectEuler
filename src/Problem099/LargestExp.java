@@ -44,6 +44,7 @@ public class LargestExp {
 		while ((line = bufferedReader.readLine()) != null) {
 			String[] lineArr = line.split(",");
 			System.out.println(lineArr[0] + " " + lineArr[1]);
+			//compress x^y to y*log(x), the value comparison will not be changed
 			input.add(Double.parseDouble(lineArr[1]) * Math.log(Double.parseDouble(lineArr[0])));
 		}
 		return input;
