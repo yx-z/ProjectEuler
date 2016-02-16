@@ -37,10 +37,8 @@ public class BouncyNums {
 		i /= 10;
 		while (i != 0) {
 			int digit = i % 10;
-			if (digit > lastDigit)
-				notDecrease = false;
-			else if (digit < lastDigit)
-				notIncrease = false;
+			if (digit > lastDigit) notDecrease = false;
+			else if (digit < lastDigit) notIncrease = false;
 			lastDigit = digit;
 			i /= 10;
 		}
