@@ -66,6 +66,8 @@ public class PokerHands {
 		}
 		return input;
 	}
+
+
 }
 
 //assume all inputs are legal as the problem stated
