@@ -15,7 +15,7 @@ package Problem092;
  */
 
 //pretty straightforward, by brute force
-public class SquareDIgitChains {
+public class SquareDigitChains {
     public static void main(String[] args) {
         final int UPPER_BOUND = 10000000;
         int count = 0;
